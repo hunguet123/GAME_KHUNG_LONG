@@ -1,0 +1,423 @@
+# depslib dependency file v1.0
+1616159996 source:c:\users\hahung\onedrive\máy tính\game\testsdl\demogame\demogame\baseobject.cpp
+	"BaseObject.h"
+
+1616253928 c:\users\hahung\onedrive\máy tính\game\testsdl\demogame\demogame\baseobject.h
+	<SDL.h>
+	<SDL_image.h>
+	<stdio.h>
+	<string>
+	<algorithm>
+
+1618142615 source:c:\users\hahung\onedrive\máy tính\game\testsdl\demogame\demogame\main.cpp
+	"GameBase.h"
+	"LTexture.h"
+	"barrier.h"
+	"grass.h"
+	"fly.h"
+	"checkCollision.h"
+	"Button.h"
+	<iostream>
+
+1617708492 source:c:\users\hahung\onedrive\máy tính\game\testsdl\demogame\demogame\character.cpp
+	"character.h"
+
+1617706168 c:\users\hahung\onedrive\máy tính\game\testsdl\demogame\demogame\character.h
+	"LTexture.h"
+	"GameBase.h"
+
+1616824796 c:\users\hahung\onedrive\máy tính\game\testsdl\demogame\demogame\barrier.h
+	"LTexture.h"
+	"character.h"
+
+1616409569 source:c:\users\hahung\onedrive\máy tính\game\testsdl\demogame\demogame\barrier.cpp
+	"barrier.h"
+
+1616336262 source:c:\users\hahung\onedrive\máy tính\game\testsdl\demogame\demogame\grass.cpp
+	"grass.h"
+
+1616515572 c:\users\hahung\onedrive\máy tính\game\testsdl\demogame\demogame\grass.h
+	"LTexture.h"
+
+1616515572 c:\users\hahung\onedrive\máy tính\game\testsdl\demogame\demogame\fly.h
+	"LTexture.h"
+
+1616409019 source:c:\users\hahung\onedrive\máy tính\game\testsdl\demogame\demogame\fly.cpp
+	"fly.h"
+
+1616409569 source:c:\users\hahung\onedrive\máy tính\game\games\game\barrier.cpp
+	"barrier.h"
+
+1616824796 c:\users\hahung\onedrive\máy tính\game\games\game\barrier.h
+	"LTexture.h"
+	"character.h"
+
+1616085362 c:\users\hahung\onedrive\máy tính\game\games\game\baseobject.h
+	<SDL.h>
+	<SDL_image.h>
+	<stdio.h>
+	<string>
+
+1616159996 source:c:\users\hahung\onedrive\máy tính\game\games\game\baseobject.cpp
+	"BaseObject.h"
+
+1617708492 source:c:\users\hahung\onedrive\máy tính\game\games\game\character.cpp
+	"character.h"
+
+1617706168 c:\users\hahung\onedrive\máy tính\game\games\game\character.h
+	"LTexture.h"
+	"GameBase.h"
+
+1616409019 source:c:\users\hahung\onedrive\máy tính\game\games\game\fly.cpp
+	"fly.h"
+
+1616515572 c:\users\hahung\onedrive\máy tính\game\games\game\fly.h
+	"LTexture.h"
+
+1616336262 source:c:\users\hahung\onedrive\máy tính\game\games\game\grass.cpp
+	"grass.h"
+
+1616515572 c:\users\hahung\onedrive\máy tính\game\games\game\grass.h
+	"LTexture.h"
+
+1618312176 source:c:\users\hahung\onedrive\máy tính\game\games\game\main.cpp
+	"GameBase.h"
+	"LTexture.h"
+	"barrier.h"
+	"grass.h"
+	"fly.h"
+	"checkCollision.h"
+	"Button.h"
+	<iostream>
+
+1616253670 c:\users\hahung\onedrive\máy tính\game\testsdl\demogame\demogame\checkcollision.h
+	"barrier.h"
+	"character.h"
+	"fly.h"
+
+1618143400 source:c:\users\hahung\onedrive\máy tính\game\testsdl\demogame\demogame\checkcollision.cpp
+	"checkCollision.h"
+
+1616409569 source:c:\users\hahung\onedrive\máy tính\game\games\demogame\barrier.cpp
+	"barrier.h"
+
+1616824796 c:\users\hahung\onedrive\máy tính\game\games\demogame\barrier.h
+	"LTexture.h"
+	"character.h"
+
+1616253928 c:\users\hahung\onedrive\máy tính\game\games\demogame\baseobject.h
+	<SDL.h>
+	<SDL_image.h>
+	<stdio.h>
+	<string>
+	<algorithm>
+
+1617706168 c:\users\hahung\onedrive\máy tính\game\games\demogame\character.h
+	"LTexture.h"
+	"GameBase.h"
+
+1616159996 source:c:\users\hahung\onedrive\máy tính\game\games\demogame\baseobject.cpp
+	"BaseObject.h"
+
+1617708492 source:c:\users\hahung\onedrive\máy tính\game\games\demogame\character.cpp
+	"character.h"
+
+1618309243 source:c:\users\hahung\onedrive\máy tính\game\games\demogame\checkcollision.cpp
+	"checkCollision.h"
+
+1616253670 c:\users\hahung\onedrive\máy tính\game\games\demogame\checkcollision.h
+	"barrier.h"
+	"character.h"
+	"fly.h"
+
+1616515572 c:\users\hahung\onedrive\máy tính\game\games\demogame\fly.h
+	"LTexture.h"
+
+1616409019 source:c:\users\hahung\onedrive\máy tính\game\games\demogame\fly.cpp
+	"fly.h"
+
+1616336262 source:c:\users\hahung\onedrive\máy tính\game\games\demogame\grass.cpp
+	"grass.h"
+
+1616515572 c:\users\hahung\onedrive\máy tính\game\games\demogame\grass.h
+	"LTexture.h"
+
+1618312388 source:c:\users\hahung\onedrive\máy tính\game\games\demogame\main.cpp
+	"GameBase.h"
+	"LTexture.h"
+	"barrier.h"
+	"grass.h"
+	"fly.h"
+	"checkCollision.h"
+	"Button.h"
+	<iostream>
+
+1616251810 c:\users\hahung\onedrive\máy tính\game\games\demogame\flying.h
+	"BaseObject.h"
+	<ctime>
+	<algorithm>
+
+1616251817 source:c:\users\hahung\onedrive\máy tính\game\games\demogame\flying.cpp
+	"flying.h"
+
+1617442819 c:\users\hahung\onedrive\máy tính\game\testsdl\demogame\demogame\ltexture.h
+	"GameBase.h"
+	<SDL.h>
+	<SDL_image.h>
+	<stdio.h>
+	<string>
+	<algorithm>
+
+1617442819 source:c:\users\hahung\onedrive\máy tính\game\testsdl\demogame\demogame\ltexture.cpp
+	"LTexture.h"
+
+1618052499 c:\users\hahung\onedrive\máy tính\game\testsdl\demogame\demogame\gamebase.h
+	<ctime>
+	<SDL.h>
+	<SDL_mixer.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<stdio.h>
+	<string>
+	<sstream>
+	<algorithm>
+	<fstream>
+
+1617452845 source:c:\users\hahung\onedrive\máy tính\game\testsdl\demogame\demogame\gamebase.cpp
+	"GameBase.h"
+
+1618053811 source:c:\users\hahung\onedrive\máy tính\game\testsdl\demogame\demogame\button.cpp
+	"Button.h"
+
+1618053568 c:\users\hahung\onedrive\máy tính\game\testsdl\demogame\demogame\button.h
+	"LTexture.h"
+	"GameBase.h"
+
+1617442819 c:\users\hahung\onedrive\máy tính\game\games\game\ltexture.h
+	"GameBase.h"
+	<SDL.h>
+	<SDL_image.h>
+	<stdio.h>
+	<string>
+	<algorithm>
+
+1618052499 c:\users\hahung\onedrive\máy tính\game\games\game\gamebase.h
+	<ctime>
+	<SDL.h>
+	<SDL_mixer.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<stdio.h>
+	<string>
+	<sstream>
+	<algorithm>
+	<fstream>
+
+1618053811 source:c:\users\hahung\onedrive\máy tính\game\games\game\button.cpp
+	"Button.h"
+
+1618053568 c:\users\hahung\onedrive\máy tính\game\games\game\button.h
+	"LTexture.h"
+	"GameBase.h"
+
+1618309243 source:c:\users\hahung\onedrive\máy tính\game\games\game\checkcollision.cpp
+	"checkCollision.h"
+
+1616253670 c:\users\hahung\onedrive\máy tính\game\games\game\checkcollision.h
+	"barrier.h"
+	"character.h"
+	"fly.h"
+
+1617452845 source:c:\users\hahung\onedrive\máy tính\game\games\game\gamebase.cpp
+	"GameBase.h"
+
+1617442819 source:c:\users\hahung\onedrive\máy tính\game\games\game\ltexture.cpp
+	"LTexture.h"
+
+1617442819 c:\users\hahung\onedrive\máy tính\game\games\demogame\ltexture.h
+	"GameBase.h"
+	<SDL.h>
+	<SDL_image.h>
+	<stdio.h>
+	<string>
+	<algorithm>
+
+1618052499 c:\users\hahung\onedrive\máy tính\game\games\demogame\gamebase.h
+	<ctime>
+	<SDL.h>
+	<SDL_mixer.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<stdio.h>
+	<string>
+	<sstream>
+	<algorithm>
+	<fstream>
+
+1618053811 source:c:\users\hahung\onedrive\máy tính\game\games\demogame\button.cpp
+	"Button.h"
+
+1618053568 c:\users\hahung\onedrive\máy tính\game\games\demogame\button.h
+	"LTexture.h"
+	"GameBase.h"
+
+1617452845 source:c:\users\hahung\onedrive\máy tính\game\games\demogame\gamebase.cpp
+	"GameBase.h"
+
+1617442819 source:c:\users\hahung\onedrive\máy tính\game\games\demogame\ltexture.cpp
+	"LTexture.h"
+
+1616409569 source:c:\users\hahung\onedrive\máy tính\games\barrier.cpp
+	"barrier.h"
+
+1616824796 c:\users\hahung\onedrive\máy tính\games\barrier.h
+	"LTexture.h"
+	"character.h"
+
+1617442819 c:\users\hahung\onedrive\máy tính\games\ltexture.h
+	"GameBase.h"
+	<SDL.h>
+	<SDL_image.h>
+	<stdio.h>
+	<string>
+	<algorithm>
+
+1618052499 c:\users\hahung\onedrive\máy tính\games\gamebase.h
+	<ctime>
+	<SDL.h>
+	<SDL_mixer.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<stdio.h>
+	<string>
+	<sstream>
+	<algorithm>
+	<fstream>
+
+1617706168 c:\users\hahung\onedrive\máy tính\games\character.h
+	"LTexture.h"
+	"GameBase.h"
+
+1618053811 source:c:\users\hahung\onedrive\máy tính\games\button.cpp
+	"Button.h"
+
+1618053568 c:\users\hahung\onedrive\máy tính\games\button.h
+	"LTexture.h"
+	"GameBase.h"
+
+1617708492 source:c:\users\hahung\onedrive\máy tính\games\character.cpp
+	"character.h"
+
+1618309243 source:c:\users\hahung\onedrive\máy tính\games\checkcollision.cpp
+	"checkCollision.h"
+
+1616253670 c:\users\hahung\onedrive\máy tính\games\checkcollision.h
+	"barrier.h"
+	"character.h"
+	"fly.h"
+
+1616515572 c:\users\hahung\onedrive\máy tính\games\fly.h
+	"LTexture.h"
+
+1616409019 source:c:\users\hahung\onedrive\máy tính\games\fly.cpp
+	"fly.h"
+
+1617452845 source:c:\users\hahung\onedrive\máy tính\games\gamebase.cpp
+	"GameBase.h"
+
+1616336262 source:c:\users\hahung\onedrive\máy tính\games\grass.cpp
+	"grass.h"
+
+1616515572 c:\users\hahung\onedrive\máy tính\games\grass.h
+	"LTexture.h"
+
+1617442819 source:c:\users\hahung\onedrive\máy tính\games\ltexture.cpp
+	"LTexture.h"
+
+1618312388 source:c:\users\hahung\onedrive\máy tính\games\main.cpp
+	"GameBase.h"
+	"LTexture.h"
+	"barrier.h"
+	"grass.h"
+	"fly.h"
+	"checkCollision.h"
+	"Button.h"
+	<iostream>
+
+1616409569 source:c:\users\hahung\onedrive\máy tính\game\games\barrier.cpp
+	"barrier.h"
+
+1616824796 c:\users\hahung\onedrive\máy tính\game\games\barrier.h
+	"LTexture.h"
+	"character.h"
+
+1617442819 c:\users\hahung\onedrive\máy tính\game\games\ltexture.h
+	"GameBase.h"
+	<SDL.h>
+	<SDL_image.h>
+	<stdio.h>
+	<string>
+	<algorithm>
+
+1618052499 c:\users\hahung\onedrive\máy tính\game\games\gamebase.h
+	<ctime>
+	<SDL.h>
+	<SDL_mixer.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<stdio.h>
+	<string>
+	<sstream>
+	<algorithm>
+	<fstream>
+
+1617706168 c:\users\hahung\onedrive\máy tính\game\games\character.h
+	"LTexture.h"
+	"GameBase.h"
+
+1618053811 source:c:\users\hahung\onedrive\máy tính\game\games\button.cpp
+	"Button.h"
+
+1618053568 c:\users\hahung\onedrive\máy tính\game\games\button.h
+	"LTexture.h"
+	"GameBase.h"
+
+1617708492 source:c:\users\hahung\onedrive\máy tính\game\games\character.cpp
+	"character.h"
+
+1618309243 source:c:\users\hahung\onedrive\máy tính\game\games\checkcollision.cpp
+	"checkCollision.h"
+
+1616253670 c:\users\hahung\onedrive\máy tính\game\games\checkcollision.h
+	"barrier.h"
+	"character.h"
+	"fly.h"
+
+1616515572 c:\users\hahung\onedrive\máy tính\game\games\fly.h
+	"LTexture.h"
+
+1616409019 source:c:\users\hahung\onedrive\máy tính\game\games\fly.cpp
+	"fly.h"
+
+1617452845 source:c:\users\hahung\onedrive\máy tính\game\games\gamebase.cpp
+	"GameBase.h"
+
+1616336262 source:c:\users\hahung\onedrive\máy tính\game\games\grass.cpp
+	"grass.h"
+
+1616515572 c:\users\hahung\onedrive\máy tính\game\games\grass.h
+	"LTexture.h"
+
+1617442819 source:c:\users\hahung\onedrive\máy tính\game\games\ltexture.cpp
+	"LTexture.h"
+
+1618312388 source:c:\users\hahung\onedrive\máy tính\game\games\main.cpp
+	"GameBase.h"
+	"LTexture.h"
+	"barrier.h"
+	"grass.h"
+	"fly.h"
+	"checkCollision.h"
+	"Button.h"
+	<iostream>
+
