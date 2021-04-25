@@ -344,7 +344,7 @@
 	"Button.h"
 	<iostream>
 
-1616409569 source:c:\users\hahung\onedrive\máy tính\game\games\barrier.cpp
+1619361390 source:c:\users\hahung\onedrive\máy tính\game\games\barrier.cpp
 	"barrier.h"
 
 1616824796 c:\users\hahung\onedrive\máy tính\game\games\barrier.h
@@ -385,7 +385,7 @@
 1617708492 source:c:\users\hahung\onedrive\máy tính\game\games\character.cpp
 	"character.h"
 
-1618309243 source:c:\users\hahung\onedrive\máy tính\game\games\checkcollision.cpp
+1618318866 source:c:\users\hahung\onedrive\máy tính\game\games\checkcollision.cpp
 	"checkCollision.h"
 
 1616253670 c:\users\hahung\onedrive\máy tính\game\games\checkcollision.h
@@ -396,7 +396,7 @@
 1616515572 c:\users\hahung\onedrive\máy tính\game\games\fly.h
 	"LTexture.h"
 
-1616409019 source:c:\users\hahung\onedrive\máy tính\game\games\fly.cpp
+1618918767 source:c:\users\hahung\onedrive\máy tính\game\games\fly.cpp
 	"fly.h"
 
 1617452845 source:c:\users\hahung\onedrive\máy tính\game\games\gamebase.cpp
@@ -411,7 +411,7 @@
 1617442819 source:c:\users\hahung\onedrive\máy tính\game\games\ltexture.cpp
 	"LTexture.h"
 
-1618312388 source:c:\users\hahung\onedrive\máy tính\game\games\main.cpp
+1619020846 source:c:\users\hahung\onedrive\máy tính\game\games\main.cpp
 	"GameBase.h"
 	"LTexture.h"
 	"barrier.h"

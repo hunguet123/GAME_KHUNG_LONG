@@ -8,7 +8,7 @@ barrier::barrier()
 
 void barrier::move( double speed )
 {
-    if (PosX < 0) PosX = PosX + rand() % 300 + 1280;
+
     PosX -= speed;
 }
 

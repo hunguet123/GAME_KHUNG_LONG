@@ -20,6 +20,7 @@ SDL_Window* gWindow = NULL;
 SDL_Renderer* gRenderer = NULL;
 
 Mix_Music* gMusic = NULL;
+Mix_Music* gMenu = NULL;
 Mix_Chunk* gJump = NULL;
 Mix_Chunk* gCollision = NULL;
 
@@ -93,6 +94,7 @@ int main( int argc, char* args[] )
             {
 			std::stringstream ScoreText;;
             std::stringstream HightScoreText;
+            Mix_Music* Music_gameplay = gMusic;
             int frame_charactor = 0;
             int frame_bird = 0;
             int time = 0;
@@ -120,11 +122,9 @@ int main( int argc, char* args[] )
                 cactus[0].PosY = 545;
                 cactus[1].PosX = cactus[0].PosX + rand() % 200 + 300 ;
                 cactus[1].PosY = 535;
-                cactus[2].PosX = cactus[1].PosX + rand() % 200 + 300;
-                cactus[2].PosY = 545;
 			while( !quit )
 			{
-				while( SDL_PollEvent( &e ) != 0 )
+				while( SDL_PollEvent( &e ) )
 				{
 					//User requests quit
 					if( e.type == SDL_QUIT )
@@ -175,6 +175,7 @@ int main( int argc, char* args[] )
 
 
                 }
+
 				if (play)
                 {
 				if (!gameOver && play )
@@ -200,7 +201,6 @@ int main( int argc, char* args[] )
                 dinosaur.move();
 				cactus[0].move(speed);
                 cactus[1].move(speed);
-                cactus[2].move(speed);
                 bird.move(speed + 4);
                 plot.move(speed);
                 Tree.move(speed - 2);
@@ -209,7 +209,6 @@ int main( int argc, char* args[] )
                 dinosaur.stop();
                 cactus[0].stop(speed);
                 cactus[1].stop(speed);
-                cactus[2].stop(speed);
                 plot.stop(speed);
                 Tree.stop(speed - 2);
                 Clouds.stop(speed - 4);
@@ -222,22 +221,35 @@ int main( int argc, char* args[] )
                 else
                 {
                 dinosaur.move();
+
 				cactus[0].move(speed);
+                if (cactus[0].X() < 0) {
                 cactus[1].move(speed);
-                cactus[2].move(speed);
+                if (cactus[1].X() < 0)
+                {
+                cactus[0].PosX = rand() % 300 + 1280;
+                }
+                }
+                if (cactus[1].X() < 0) cactus[1].PosX = cactus[1].PosX + cactus[0].PosX;
+
+
+
                 if(time > 500) bird.move(speed + 4);
                 plot.move(speed);
                 Tree.move(speed - 2);
 				Clouds.move(speed - 4);
-				speed += 0.0005;
+				int speed_up = int(score);
+				if (speed_up % 300 == 0)
+				std::cout << speed_up % 1000;
+				speed += 0.005;
 				score++;
                 }
 
-                if (!gameOver)
+                if (!gameOver && play)
                 {
                if( Mix_PlayingMusic() == 0 )
                 {
-                    Mix_PlayMusic( gMusic, -1 );
+                    Mix_PlayMusic( Music_gameplay, -1 );
                 }
                     else if( Mix_PausedMusic() == 1 )
                     {
@@ -246,7 +258,7 @@ int main( int argc, char* args[] )
                 }
                 else {
                     Mix_PauseMusic();
-                    if (score == time - 1 ) Mix_PlayChannel(-1, gCollision, 0);
+                    if ( score == time -1 ) Mix_PlayChannel(-1, gCollision, 0);
                 }
 
 
@@ -254,7 +266,7 @@ int main( int argc, char* args[] )
                 double Cloud_x = Clouds.X()- 1280;
                 double Cloud_y = Clouds.Y() - 535;
 
-                int night = time / 2000;
+                int night = score / 500;
                 if (night % 2 == 0) {
                 cloudsTexture.render(Cloud_x, Cloud_y, NULL, gRenderer);
                 cloudsTexture.render(Cloud_x + 1280, Cloud_y, NULL, gRenderer);
@@ -274,7 +286,6 @@ int main( int argc, char* args[] )
 
                 cactus[0].render(cactusTexture, NULL, gRenderer);
                 cactus[1].render(cactus1Texture, NULL, gRenderer);
-                cactus[2].render(cactusTexture, NULL, gRenderer);
 
                 SDL_Rect* birdCurrentClip = &birdClips[frame_bird/9 ];
 
@@ -292,8 +303,8 @@ int main( int argc, char* args[] )
                 }
                 if (gameOver) {
                 //GameOverTexture.render(0, 0, NULL, gRenderer);
-                gScoreTextTexture.render(SCREEN_HEIGHT / 2, SCREEN_WIDTH / 2,NULL, gRenderer);
-                gHightScoreTextTexture.render(SCREEN_HEIGHT / 2 , SCREEN_WIDTH / 2 - 100, NULL, gRenderer);
+                gScoreTextTexture.render(SCREEN_HEIGHT / 2, 200,NULL, gRenderer);
+                gHightScoreTextTexture.render(SCREEN_HEIGHT / 2 , 200 - 100, NULL, gRenderer);
                 gPlayAgain.render(gPlayAgainTexture, gSpriteClips, gRenderer);
 				gExitButton.render(gExitTexture, gSpriteClips, gRenderer);
 
@@ -306,7 +317,7 @@ int main( int argc, char* args[] )
 				{
 					frame_charactor = 0;
 				}
-				time++;
+                time++;
 			}
 
 			SDL_RenderPresent( gRenderer );
@@ -440,25 +451,15 @@ bool loadMedia()
 
 	gJump = Mix_LoadWAV("sound//Jump.wav");
 	gCollision = Mix_LoadWAV("sound//collision.wav");
-
-	gMusic = Mix_LoadMUS("sound//beat.wav");
+    gMenu = Mix_LoadMUS("sound//menu.wav");
+	gMusic = Mix_LoadMUS("sound//beat.mp3");
 
 	gFont = TTF_OpenFont("lazy.otf", 30 );
 	gFontGameOver = TTF_OpenFont("lazy.otf", 60);
-	if (gFont == NULL || gFontGameOver == NULL)
-    {
-        printf("failed to load lazy font! \n", TTF_GetError() );
-    }
+    gPlayButttonTexture.loadFromFile("img//play_button.png", gRenderer);
+    gExitTexture.loadFromFile("img//exit_button.png", gRenderer);
+    gPlayAgainTexture.loadFromFile("img//play_button.png", gRenderer);
 
-    if (!gPlayButttonTexture.loadFromFile("img//play_button.png", gRenderer)
-        || !gExitTexture.loadFromFile("img//exit_button.png", gRenderer)
-        || !gPlayAgainTexture.loadFromFile("img//play_button.png", gRenderer))
-    {
-        printf("failed to load button \n");
-        success = false;
-    }
-    else
-    {
         for (int i = 0; i < BUTTON_SPRITE_TOTAL; i++)
         {
             gSpriteClips[i].x = 150*i;
@@ -469,7 +470,7 @@ bool loadMedia()
         gPlayButton.setPosition(SCREEN_WIDTH / 2 - 40, SCREEN_HEIGHT / 2);
         gExitButton.setPosition(SCREEN_WIDTH / 2 - 40, SCREEN_HEIGHT / 2 + 80);
         gPlayAgain.setPosition(SCREEN_WIDTH / 2 - 40, SCREEN_HEIGHT / 2);
-    }
+
 
 	return success;
 }
@@ -500,7 +501,9 @@ void close()
     gCollision = NULL;
 
     Mix_FreeMusic(gMusic);
+    Mix_FreeMusic(gMenu);
     gMusic = NULL;
+    gMenu = NULL;
 
     //TTF
     TTF_CloseFont(gFont);

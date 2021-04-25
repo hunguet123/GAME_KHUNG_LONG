@@ -9,7 +9,7 @@ fly::fly()
 void fly::move(double speed)
 {
     if (Fx < 0) {
-        Fx = rand() % 3000 + 1280;
+        Fx = rand() % 10000 + 1280;
         Fy = rand() % 145 + 400;
     }
     Fx -= speed;
