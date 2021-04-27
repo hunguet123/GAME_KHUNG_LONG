@@ -1,5 +1,5 @@
 #include "Button.h"
-
+#include <iostream>
 
 LButton::LButton()
 {
@@ -15,10 +15,10 @@ void LButton::setPosition( int x, int y )
 	mPosition.y = y;
 }
 
-void LButton::handleEvent( SDL_Event& e, bool &play )
+void LButton::handleEvent( SDL_Event& e, bool &play, Mix_Chunk* gButton, Mix_Chunk* gButtonOn )
 {
 	//If mouse event happened
-	if( e.type == SDL_MOUSEMOTION || e.type == SDL_MOUSEBUTTONDOWN || e.type == SDL_MOUSEBUTTONUP )
+	if( e.type == SDL_MOUSEMOTION || e.type == SDL_MOUSEBUTTONDOWN )
 	{
 		//Get mouse position
 		int x, y;
@@ -52,11 +52,11 @@ void LButton::handleEvent( SDL_Event& e, bool &play )
 		if( !inside )
 		{
 			mCurrentSprite = BUTTON_SPRITE_MOUSE_OUT;
+
 		}
 		//Mouse is inside button
 		else
 		{
-			//Set mouse over sprite
 			switch( e.type )
 			{
 				case SDL_MOUSEMOTION:
@@ -65,14 +65,13 @@ void LButton::handleEvent( SDL_Event& e, bool &play )
 
 				case SDL_MOUSEBUTTONDOWN:
 				mCurrentSprite = BUTTON_SPRITE_MOUSE_DOWN;
+				Mix_PlayChannel(-1, gButton, 0);
 				play = true;
 				break;
 
-				case SDL_MOUSEBUTTONUP:
-				mCurrentSprite = BUTTON_SPRITE_MOUSE_UP;
-				break;
+
 			}
-		}
+        }
 	}
 }
 

@@ -20,9 +20,10 @@ SDL_Window* gWindow = NULL;
 SDL_Renderer* gRenderer = NULL;
 
 Mix_Music* gMusic = NULL;
-Mix_Music* gMenu = NULL;
 Mix_Chunk* gJump = NULL;
 Mix_Chunk* gCollision = NULL;
+Mix_Chunk* gButton = NULL;
+Mix_Chunk* gButtonOn = NULL;
 
 TTF_Font* gFont = NULL;
 TTF_Font* gFontGameOver = NULL;
@@ -132,15 +133,15 @@ int main( int argc, char* args[] )
 						quit = true;
 					}
 					else if (!gameOver && play) {
-                        dinosaur.handleEvent( e , gJump);
+                        dinosaur.handleEvent( e , gJump );
 					}
 					else if (!gameOver ) {
-					gPlayButton.handleEvent(e, play);
-					gExitButton.handleEvent(e, exit);
+					gPlayButton.handleEvent(e, play, gButton, gButtonOn);
+					gExitButton.handleEvent(e, exit, gButton, gButtonOn);
 					}
 					else if (gameOver) {
-					gPlayAgain.handleEvent(e, playAgain);
-					gExitButton.handleEvent(e, exit);
+					gPlayAgain.handleEvent(e, playAgain, gButton, gButtonOn);
+					gExitButton.handleEvent(e, exit, gButton, gButtonOn);
 					}
 				}
 
@@ -309,8 +310,8 @@ int main( int argc, char* args[] )
 				gExitButton.render(gExitTexture, gSpriteClips, gRenderer);
 
                 }
-
-				++frame_charactor;
+                if (dinosaur.Y() < 550) frame_charactor;
+				else ++frame_charactor;
                 ++frame_bird;
 				if (frame_bird / 9 >= BIRD_ANIMATION_FRAMES ) frame_bird = 0;
 				if( frame_charactor / 6 >= WALKING_ANIMATION_FRAMES )
@@ -451,7 +452,8 @@ bool loadMedia()
 
 	gJump = Mix_LoadWAV("sound//Jump.wav");
 	gCollision = Mix_LoadWAV("sound//collision.wav");
-    gMenu = Mix_LoadMUS("sound//menu.wav");
+	gButton = Mix_LoadWAV("sound//mouse_click.wav");
+	gButtonOn = Mix_LoadWAV("sound//button_on.wav");
 	gMusic = Mix_LoadMUS("sound//beat.mp3");
 
 	gFont = TTF_OpenFont("lazy.otf", 30 );
@@ -497,15 +499,16 @@ void close()
 
     Mix_FreeChunk(gJump);
     Mix_FreeChunk(gCollision);
+    Mix_FreeChunk(gButton);
+    Mix_FreeChunk(gButtonOn);
     gJump = NULL;
     gCollision = NULL;
+    gButton = NULL;
+    gButtonOn = NULL;
 
     Mix_FreeMusic(gMusic);
-    Mix_FreeMusic(gMenu);
     gMusic = NULL;
-    gMenu = NULL;
 
-    //TTF
     TTF_CloseFont(gFont);
     TTF_CloseFont(gFontGameOver);
     gFont = NULL;

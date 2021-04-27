@@ -13,7 +13,7 @@ class LButton
 		void setPosition( int x, int y );
 
 		//Handles mouse event
-		void handleEvent( SDL_Event& e, bool &play );
+		void handleEvent( SDL_Event& e, bool &play, Mix_Chunk* gButton, Mix_Chunk* gButtonOn );
 
 		//Shows button sprite
 		void render(LTexture& gButtonTexture, SDL_Rect gSpriteClips[], SDL_Renderer* gRenderer);

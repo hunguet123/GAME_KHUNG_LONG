@@ -16,7 +16,6 @@ void character::handleEvent( SDL_Event& e, Mix_Chunk* gJump )
 		{
 			case SDLK_SPACE:
             status = JUMP;
-
             Mix_PlayChannel(-1, gJump, 0);
             if (mPosY < 550 ) status = FALL;
             break;
