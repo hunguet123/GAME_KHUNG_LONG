@@ -16,3 +16,5 @@ SDL2_ttf
 SDL2
 SDL2_image
 SDL2_ttf
+
+https://youtu.be/Lz05HZTKRUQ
